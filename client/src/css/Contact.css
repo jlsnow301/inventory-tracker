@@ -14,11 +14,13 @@
 .SubmitForm {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  margin-top: 1px;
+  margin-left: 80px;
 }
 
 .Social {
   margin-left: 14px;
+  margin-top: 16rem;
 }
 
 .IconSocial {
@@ -34,7 +36,8 @@
 }
 
 .List {
-  margin-top: 20px;
+  margin-top: 60px;
+  margin-left: 85px;
 }
 
 .label {
