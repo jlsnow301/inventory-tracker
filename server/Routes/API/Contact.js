@@ -25,7 +25,10 @@ const SGMAIL = require('@sendgrid/mail');
 
 ROUTER.post('/', (req, res) => {
   SGMAIL.setApiKey(EMAIL);
-  // how the message should be configured
+  console.log(req.body);
+  // FROM has to be stenbergdigeronimo@gmail.com
+  // how the API works is that the email needs to be approved.
+  // This can be from a domain!
   const msg = {
     to: 'stenbergdigeronimo@gmail.com',
     from: 'stenbergdigeronimo@gmail.com',

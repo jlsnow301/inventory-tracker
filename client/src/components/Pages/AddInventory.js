@@ -49,7 +49,7 @@ const AddInventory = (props) => {
       },
     },
     false
-  );
+  );  
 
   // Takes the item and updates an individual attribute
   const inventorySubmitHandler = (event) => {

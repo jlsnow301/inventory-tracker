@@ -22,6 +22,7 @@ npm i body-parser concurrently express mongoose @sendgrid/mail
 npm i -D nodemon
 
 [sendgrid/Mail Documentation](https://www.npmjs.com/package/@sendgrid/mail)
+In order to use SendGrid you'll need an account and an email address that has been approved. You'll use the approved email address/Domain as the FROM address. **If you do not use an approved from email you will get a 401 error :(**
 
 NOTE: You will need to edit the **scripts** portion of your package.json in the server
 
