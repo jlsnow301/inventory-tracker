@@ -29,7 +29,7 @@ const InventoryDisplay = (props) => {
   };
 
   useEffect(() => {
-    setInventory(GetHttp("inventory", `/${props.query}`));
+    setInventory(GetHttp("inventory", `/${props.query}`)); //
   }, [props.query]);
 
   // Returns

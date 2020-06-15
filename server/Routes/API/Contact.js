@@ -1,10 +1,10 @@
 /**
- * server/routes/inventories/invetory.js
+ * server/Routes/API/Contact.js
  *
  * @routes /api/contact
  * post / Sends email
  *
- * @todos finish
+ * @todos
  *
  * @issues
  *
@@ -16,40 +16,24 @@ const EMAIL = require('../../config/keys').sendGridURI;
 const SGMAIL = require('@sendgrid/mail');
 /**
  * @purpose Handles Activity for the contact form! YAY CONTACT!
- * @complete --> NO
- * @working no
- *
- * @todos Connect to Form
- * @todos Build email sending capablity with NPM dependency sendgrid/mail
+ * @complete --> Yes
+ * @working Yes
  *
  * @notes
  *  uses dependency sendgrid/mail, see readme.md for link to documentation
  */
 
-// This
-// Anthony
-// Message
 ROUTER.post('/', (req, res) => {
   SGMAIL.setApiKey(EMAIL);
-  console.log(req.body);
-  /* const msg = {
-    To: 'stenbergdigeronimo@gmail.com',
-    From: req.body.email,
-    Subject: 'Inventory Contact testing',
-    Text:
-      req.body.firstname +
-      ' ' +
-      req.body.lastname +
-      ' says ' +
-      req.body.message,
-  };*/
+  // how the message should be configured
   const msg = {
-    to: 'test@example.com',
-    from: 'test@example.com',
-    subject: 'Sending with Twilio SendGrid is Fun',
-    text: 'and easy to do anywhere, even with Node.js',
-    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    to: 'stenbergdigeronimo@gmail.com',
+    from: 'stenbergdigeronimo@gmail.com',
+    subject: 'Inventory Contact Form Submission',
+    text: `${req.body.firstname} ${req.body.lastname} sent the following message ${req.body.message} and asked to be emailed back at ${req.body.email}`,
+    html: `<p>${req.body.firstname} ${req.body.lastname} sent the following message <br> ${req.body.message} <br> and asked to be emailed back at ${req.body.email}</p>`,
   };
+
   SGMAIL.send(msg)
     .then((result) => {
       res.status(200).json({

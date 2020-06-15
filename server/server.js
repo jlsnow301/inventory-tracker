@@ -3,7 +3,6 @@ const MONGOOSE = require('mongoose');
 const BODYPARSER = require('body-parser');
 const CORS = require('cors');
 
-
 const APP = EXPRESS();
 
 // bodyparser middleware
@@ -61,6 +60,8 @@ APP.use('/api/inventory', require('./Routes/API/Inventory'));
 APP.use('/api/items', require('./Routes/API/Items'));
 // Contact routes
 APP.use('/api/contact', require('./Routes/API/Contact'));
+// login Routes
+APP.use('/api/auth', require('./Routes/API/Auth'));
 
 const port = process.env.PORT || 5000;
 APP.listen(port, () => console.log(`Server started on port ${port}`));
