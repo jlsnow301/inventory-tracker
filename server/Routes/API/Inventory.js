@@ -1,5 +1,5 @@
 /**
- * server/routes/inventories/invetory.js
+ * server/Routes/API/invetory.js
  *
  * @routes /api/inventory
  *  get / retrieves all the inventories of the user

@@ -1,5 +1,5 @@
 /**
- * server/routes/API/users.js
+ * server/Routes/API/users.js
  *
  * @routes /api/users
  * get /:org - gets all the members of an organization

@@ -17,7 +17,7 @@ npm i reactstrap bootstrap @emotion/styled @emotion/core react-router-dom
 
 ## For the Server
 
-npm i body-parser concurrently express mongoose @sendgrid/mail
+npm i body-parser concurrently express mongoose @sendgrid/mail passport passport-google-oath20 cookie-session
 
 npm i -D nodemon
 
@@ -40,3 +40,7 @@ When developing and **_needing the server run this command:_**
 
 [Mern CRUD Tutorial](https://www.djamware.com/post/59faec0a80aca7739224ee1f/building-crud-web-application-using-mern-stack)
 [JSON.org](https://www.json.org/json-en.html)
+[@sendgrid/mail](https://www.npmjs.com/package/@sendgrid/mail)
+[sendgrid website - to authorize from email addresses](https://sendgrid.com/)
+[passport documentation](http://www.passportjs.org)
+[cookie-session documenation](https://www.npmjs.com/package/cookie-session)

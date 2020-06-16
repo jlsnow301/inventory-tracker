@@ -2,20 +2,29 @@ const EXPRESS = require('express');
 const MONGOOSE = require('mongoose');
 const BODYPARSER = require('body-parser');
 const CORS = require('cors');
-
+const PASSPORT = require('passport');
+const COOKIESESSION = require('cookie-session');
 const APP = EXPRESS();
 
 // bodyparser middleware
 APP.use(BODYPARSER.json());
+APP.use(PASSPORT.initialize());
+APP.use(PASSPORT.session());
 
+APP.use(
+  COOKIESESSION({
+    name: 'session',
+    keys: ['key1', 'key2'],
+  })
+);
 // Cross site request frogery
 // this here... I Really LIke this!
 // Wish Ed would have taught this!
-const WHITELIST = ['http://localhost:3000'];
+//const WHITELIST = ['http://localhost:3000'];
 
 // +++++ comment this out to do testing through postman +++++
 // +++++ you wont be able to test with postman if you dont +++++
-
+/*
 const CORSOPTIONS = {
   origin: function (origin, callback) {
     if (WHITELIST.indexOf(origin) > -1) {
@@ -25,8 +34,8 @@ const CORSOPTIONS = {
     }
   },
 };
-
-APP.use(CORS(CORSOPTIONS));
+*/
+APP.use(CORS());
 
 // DB config
 // If you make your keys public one more time...
@@ -53,14 +62,14 @@ APP.use((req, res, next) => {
  */
 
 // members API routes
-APP.use('/api/users', require('./Routes/Users/Users'));
+APP.use('/api/users', require('./Routes/API/Users'));
 // Inventory routes
 APP.use('/api/inventory', require('./Routes/API/Inventory'));
 // Items routes
 APP.use('/api/items', require('./Routes/API/Items'));
 // Contact routes
 APP.use('/api/contact', require('./Routes/API/Contact'));
-// login Routes
+// Login Routes
 APP.use('/api/auth', require('./Routes/API/Auth'));
 
 const port = process.env.PORT || 5000;

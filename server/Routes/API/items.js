@@ -1,5 +1,5 @@
 /**
- * server/routes/inventories/invetory.js
+ * server/Routes/API/Items.js
  *
  * @routes /api/item
  * post /:id adds an item
