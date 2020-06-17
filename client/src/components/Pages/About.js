@@ -1,35 +1,16 @@
 import React from "react";
 import { Grid } from "semantic-ui-react";
 import styled from "@emotion/styled";
+import "../../css/About.css";
 
 const About = () => {
-  const Container = styled.div`
-    margin-left: 30px;
-  `;
-
-  const ImgBox = styled.div`
-    align: center;
-  `;
-  const ImgIcon = styled.div`
-    width: 100px;
-    margin-left: 20%;
-    margin-bottom: 15%;
-  `;
-
-  const Banner = styled.div`
-    width: 100%;
-  `;
-
-  const Icon = styled.div`
-    font-size: 30px;
-  `;
   return (
-    <Container>
+    <div class="Container">
       <Grid divided="vertically">
         <Grid.Row columns={1}>
-          <Banner>
+          <div class="Banner">
             <img src="./aboutBanner.jpg" width=" 100% " alt="banner" />
-          </Banner>
+          </div>
         </Grid.Row>
 
         <Grid.Row columns={2}>
@@ -68,11 +49,11 @@ const About = () => {
 
         <Grid.Row columns={4}>
           <Grid.Column>
-            <ImgBox>
-              <ImgIcon>
+            <div class="ImgBox">
+              <div class="ImgIcon">
                 <img src="./human.png" width=" 100% " alt="icon" />
-              </ImgIcon>
-            </ImgBox>
+              </div>
+            </div>
             <h1>Anthony</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -81,7 +62,7 @@ const About = () => {
               Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit
               amet.
             </p>
-            <Icon>
+            <div class="Icon">
               <a href=" ">
                 <ion-Icon name="mail-outline"></ion-Icon>
               </a>
@@ -91,14 +72,14 @@ const About = () => {
               <a href=" ">
                 <ion-Icon name="logo-github"></ion-Icon>
               </a>
-            </Icon>
+            </div>
           </Grid.Column>
           <Grid.Column>
-            <ImgBox>
-              <ImgIcon>
+            <div class="ImgBox">
+              <div class="ImgIcon">
                 <img src="./human.png" width=" 100% " alt="icon" />
-              </ImgIcon>
-            </ImgBox>
+              </div>
+            </div>
             <h1>Margarita</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -106,7 +87,7 @@ const About = () => {
               pharetra pharetra massa massa ultricies mi quis hendrerit. Nunc
               vel risus commodo viverra maecenas accumsan lacus.
             </p>
-            <Icon>
+            <div class="Icon">
               <a href=" ">
                 <ion-Icon name="mail-outline"></ion-Icon>
               </a>
@@ -116,14 +97,14 @@ const About = () => {
               <a href=" ">
                 <ion-Icon name="logo-github"></ion-Icon>
               </a>
-            </Icon>
+            </div>
           </Grid.Column>
           <Grid.Column>
-            <ImgBox>
-              <ImgIcon>
+            <div class="ImgBox">
+              <div class="ImgIcon">
                 <img src="./human.png" width=" 100% " alt="icon" />
-              </ImgIcon>
-            </ImgBox>
+              </div>
+            </div>
             <h1>Jeremiah</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -131,7 +112,7 @@ const About = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <Icon>
+            <div class="Icon">
               <a href=" ">
                 <ion-Icon name="mail-outline"></ion-Icon>
               </a>
@@ -141,14 +122,14 @@ const About = () => {
               <a href=" ">
                 <ion-Icon name="logo-github"></ion-Icon>
               </a>
-            </Icon>
+            </div>
           </Grid.Column>
           <Grid.Column>
-            <ImgBox>
-              <ImgIcon>
+            <div class="ImgBox">
+              <div class="ImgIcon">
                 <img src="./human.png" width=" 100% " alt="icon" />
-              </ImgIcon>
-            </ImgBox>
+              </div>
+            </div>
             <h1>Selina</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -156,7 +137,7 @@ const About = () => {
               Tincidunt lobortis feugiat vivamus at. Et malesuada fames ac
               turpis egestas.
             </p>
-            <Icon>
+            <div class="Icon">
               <a href=" ">
                 <ion-Icon name="mail-outline"></ion-Icon>
               </a>
@@ -166,11 +147,11 @@ const About = () => {
               <a href=" ">
                 <ion-Icon name="logo-github"></ion-Icon>
               </a>
-            </Icon>
+            </div>
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </Container>
+    </div>
   );
 };
 export default About;
